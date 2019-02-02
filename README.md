@@ -1,3 +1,3 @@
-##Electron_DApp
+# Electron DApp 
 
-DApp desarrollada con solidity para el intercambio de energia solar entre viviendas
+DApp desarrollada con Solidity para el intercambio de energía solar entre viviendas
