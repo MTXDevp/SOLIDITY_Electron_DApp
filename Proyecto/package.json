@@ -1,0 +1,26 @@
+{
+  "name": "electron-dapp",
+  "version": "1.0.0",
+  "description": "Peer-to-peer solar energy platform",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Methox/Electron_DApp.git"
+  },
+  "author": "dejuanfran99, Methox, Mystic-Ervo and migohe14",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Methox/Electron_DApp/issues"
+  },
+  "homepage": "https://github.com/Methox/Electron_DApp#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
