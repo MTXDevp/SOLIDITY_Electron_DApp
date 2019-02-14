@@ -1,13 +1,15 @@
 pragma solidity ^0.5.0;
 
 contract SimpleStorage {
-  uint storedData;
+  string datosAlmacenados;
 
-  function set(uint x) public {
-    storedData = x;
+//graba un documento en la blockchain
+  function set(string memory x) public {
+    datosAlmacenados = x;
   }
 
-  function get() public view returns (uint) {
-    return storedData;
+//coje el hash criptográfico del documento almacenado
+  function get() public view returns (string memory) {
+    return datosAlmacenados;
   }
 }

@@ -1,5 +1,6 @@
 pragma solidity ^0.5.0;
-
+// metodos que seran migrados a la blochain y suponen un costo de gas, cada uno de  ellos representa
+//una transaccion en ganache xd
 contract Migrations {
   address public owner;
   uint public last_completed_migration;
