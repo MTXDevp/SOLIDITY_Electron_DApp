@@ -55,43 +55,47 @@ this.setState({transactionHash});
 render() {
 
 return (
-<div className="App">
-<header className="App-header">
-<h1> IPFS Dapp</h1>
-</header>
-<hr />
-<h3> Choose file to send to IPFS </h3>
+<div>
+    <div class="header">
+        <div class="sides">
+            <a href="#" class="logo">BLOG</a>
+        </div>
+        <div class="sides">
+            <a href="#" class="menu">-</a>
+        </div>
+        <div class="info">
+            <h3>Un mundo mejor gracias a la tecnología</h3>
+            <h1>Eco-Electron</h1>
+            <div class="meta">
+                <a  href="index.html" target="_b" class="author"></a>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <p>Nuestra idea satisface la necesidad de utilizar energías renovables y limpias. 
+            Ayudando a las personas a obtener grandes beneficios económicos y un estilo de vida más benévolo con el medio ambiente.
+            Con un sistema de  placas solares y un sistema de transmisión de energía creado por nosotros utilizando la tecnología Blockchain 
+            que nos diferenciará del resto de empresas del sector.
+        </p>
+    </section>
+    <div class="header">
+    <div class="donut-chart-block block"> 
+                    <h2>GRAFICA</h2>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <div class="donut-chart">
 
-<form onSubmit={this.onSubmit}>
-<input type="file" onChange={this.captureFile}/>
-<button type="submit"> Send it </button>
-</form>
-
-<hr/>
-<table >
-<thead>
-<tr>
-<th>Sl No</th>
-<th>Values</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IPFS Hash # stored on Eth Contract</td>
-<td>{this.state.ipfsHash}</td>
-</tr>
-<tr>
-
-<td>Ethereum Contract Address</td>
-<td>{this.state.ethAddress}</td>
-</tr>
-<tr>
-<td>Tx Hash # </td>
-<td>{this.state.transactionHash}</td>
-</tr>
-</tbody>
-</table>
-</div>);
+      <div id="porcion1" class="recorte"><div class="quesito ios" data-rel="21"></div></div>
+     <div id="porcion2" class="recorte"><div class="quesito mac" data-rel="39"></div></div>
+     <div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
+     <div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
+    </div>
+    </div>
+    </div>
+</div>
+);
 }
 }
 

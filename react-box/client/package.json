@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ipfs-api": "^26.1.2",
     "react": "^16.8.1",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
-    "web3": "^1.0.0-beta.37"
+    "web3": "^1.0.0-beta.46"
   },
   "scripts": {
     "start": "react-scripts start",
