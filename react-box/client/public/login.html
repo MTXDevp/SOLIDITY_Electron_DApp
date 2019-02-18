@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+  </head>
+  <!--LOS SIGUIENTES JS TE PERMITEN LOGUEARTE CON EL CORREO Y LA CUENTA DE GOOGLE-->
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  <script>
+  // Inicialiciamos los servicios
+  var config = {
+    apiKey: "AIzaSyDkh3394HvB4EVFUUFRrhPNVrrNfbz_-eI",
+    authDomain: "electron-8d5e3.firebaseapp.com",
+    databaseURL: "https://electron-8d5e3.firebaseio.com",
+    projectId: "electron-8d5e3",
+    storageBucket: "electron-8d5e3.appspot.com",
+    messagingSenderId: "26389157204"
+  };
+  firebase.initializeApp(config);//inicializar la configuracion
+</script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <script type="text/javascript">
+    // get credenciales
+    var uiConfig = {
+      signInSuccessUrl: 'loginOK.html',
+      signInOptions: [
+        //Servicios habilitados en AUTH web firebase
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+
+      ],
+      // tosUrl and privacyPolicyUrl accept either url string or a callback
+      // function.
+      // Terms of service url/callback.
+      tosUrl: 'localhost',
+      // Privacy policy url/callback.
+      privacyPolicyUrl: function() {
+        window.location.assign('privacidad.html');
+      }
+    };
+    // Inicializacmos UI
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#containerAuten', uiConfig);
+  </script>
+  <body>
+      <h1 align="center" style="color:white;"> LOGIN ELECTRON</h1>
+      <div id="containerAuten">
+        </div>
+  </body>
+
+</html>

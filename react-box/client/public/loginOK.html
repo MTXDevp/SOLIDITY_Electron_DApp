@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ELECTRON</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script>
+    // inicializamos la configuracion
+    var config = {
+      apiKey: "AIzaSyDkh3394HvB4EVFUUFRrhPNVrrNfbz_-eI",
+      authDomain: "electron-8d5e3.firebaseapp.com",
+      databaseURL: "https://electron-8d5e3.firebaseio.com",
+      projectId: "electron-8d5e3",
+      storageBucket: "electron-8d5e3.appspot.com",
+      messagingSenderId: "26389157204"
+    };
+    firebase.initializeApp(config);//inicializar la configuracion
+  </script>
+  </head>
+
+  <body>
+    <div>
+    <script>
+      firebase.auth().onAuthStateChanged(function(user){
+        if (user) {
+          document.body.innerHTML = '<h1> Felicidades ' + user.displayName + ' , has iniciado sesión correctamente . </h1> ' ;
+        } else {
+          document.body.innerHTML = '<h1>' + user.displayName + ' , ha ocurrido un error validando sus credenciales . </h1>' ;
+        }
+      });
+    </script>
+    <h1> FELICIDADES, A CONTINUACIÓN PODRAS DISFRUTAR DE NUESTROS SERVICIOS </h1>
+      </div>
+  </body>
+</html>
